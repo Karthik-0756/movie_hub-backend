@@ -22,18 +22,25 @@ router.post('/newUser',async function(req,res,next){
       return res.json("user not found")
      }
     
-    if(user.password !== password){
+     if(user.password !== password){
       return res.json("password mismatch")
     } 
-    return res.json("success")
+
+   
+
+    
+       return res.json("success")
+
+    
+   
 
   }catch(e){
 
   }
 })
 
-router.get('/', function(req, res, next) {
-  res.json("hjkl")
+router.get('/newUser', function(req, res, next) {
+  res.json("New user api work corretly")
 });
 
 module.exports = router;
